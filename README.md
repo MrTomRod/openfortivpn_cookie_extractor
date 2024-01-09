@@ -40,6 +40,16 @@ openfortivpn_cookie_extractor \
 --file='~/.mozilla/firefox/some-profile-id/sessionstore-backups/recovery.jsonlz4'
 ```
 
+## Add to .bashrc
+
+To this line to `.bashrc`:
+
+```bash
+alias vpn="openfortivpn_cookie_extractor --browser_cmd 'firefox https://univpn.unibe.ch/remote/saml/start --cookie={cookie}' --openfortivpn_cmd 'sudo openfortivpn univpn.unibe.ch'"
+```
+
+Then you can just run `vpn` to connect to the VPN.
+
 ## Acknowledgements
 
 This project was inspired by [fuckForticlient](https://github.com/nonamed01/fuckForticlient/).

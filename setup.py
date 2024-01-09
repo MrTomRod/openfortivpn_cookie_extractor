@@ -12,7 +12,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'vpn=openfortivpn_cookie_extractor.openfortivpn_cookie_extractor:main',
+            'openfortivpn_cookie_extractor=openfortivpn_cookie_extractor.openfortivpn_cookie_extractor:main',
         ],
     },
 )

@@ -52,7 +52,7 @@ def cli(
     This script starts a browser and openfortivpn. It then waits for the browser to create a SVPNCOOKIE and starts openfortivpn with that cookie.
 
     Example usage:
-       vpn --browser_cmd 'firefox https://vpn.uni.org/remote/saml/start' --openfortivpn_cmd 'sudo openfortivpn vpn.uni.org --cookie={cookie}'
+       openfortivpn_cookie_extractor --browser_cmd 'firefox https://vpn.uni.org/remote/saml/start' --openfortivpn_cmd 'sudo openfortivpn vpn.uni.org --cookie={cookie}'
 
     :param browser_cmd: Command to start the browser, e.g. 'firefox https://vpn.uni.org/remote/saml/start'
     :param openfortivpn_cmd: Command to start openfortivpn, e.g. 'sudo openfortivpn vpn.uni.org --cookie={cookie}' ({cookie} will be replaced with the actual cookie)

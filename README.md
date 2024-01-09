@@ -26,7 +26,7 @@ pipx install git+https://github.com/MrTomRod/openfortivpn_cookie_extractor
 To use this script, run something like the following command:
 
 ```bash
-vpn \
+openfortivpn_cookie_extractor \
 --browser_cmd 'firefox https://univpn.unibe.ch/remote/saml/start --cookie={cookie}' \
 --openfortivpn_cmd 'sudo openfortivpn univpn.unibe.ch'
 ```
@@ -34,7 +34,7 @@ vpn \
 You can also specify the path to the `recovery.jsonlz4` file if you have multiple Firefox profiles:
 
 ```bash
-vpn \
+openfortivpn_cookie_extractor \
 --browser_cmd 'firefox https://univpn.unibe.ch/remote/saml/start --cookie={cookie}' \
 --openfortivpn_cmd 'sudo openfortivpn univpn.unibe.ch' \
 --file='~/.mozilla/firefox/some-profile-id/sessionstore-backups/recovery.jsonlz4'

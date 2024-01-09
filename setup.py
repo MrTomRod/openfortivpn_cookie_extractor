@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='openfortivpn_cookie_extractor',
@@ -6,7 +6,7 @@ setup(
     description='Get SVPNCOOKIE from Firefox and start openfortivpn',
     url='https://github.com/MrTomRod/openfortivpn_cookie_extractor',
     author='Thomas Roder',
-    packages=find_packages(),
+    packages=['openfortivpn_cookie_extractor'],
     install_requires=[
         'lz4', 'fire'
     ],

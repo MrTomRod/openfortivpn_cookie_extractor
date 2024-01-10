@@ -22,8 +22,8 @@ def start_openfortivpn(openfortivpn_cmd: str, svpncookie: str):
 
 
 def connection_loop(browser_cmd: str, openfortivpn_cmd: str, recovery_jsonlz4_file: str, ):
-    print(browser_cmd)
-    subprocess.run(browser_cmd, shell=True)
+    print(browser_cmd, "start_new_session=True")
+    subprocess.Popen(browser_cmd, shell=True, start_new_session=True)
     fail_count = 0
     while True:
         svpncookies = load_svpncookies(recovery_jsonlz4_file)

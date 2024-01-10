@@ -17,12 +17,14 @@ def load_svpncookies(file):
 
 
 def start_openfortivpn(openfortivpn_cmd: str, svpncookie: str):
-    cmd = f'{openfortivpn_cmd} --cookie={svpncookie}'
+    assert '{cookie}' in openfortivpn_cmd, f'The {openfortivpn_cmd=} does not contain "{{cookie}}"!'
+    cmd = openfortivpn_cmd.format(cookie=svpncookie)
+    print(cmd)
     subprocess.run(cmd, shell=True, text=True)
 
 
 def connection_loop(browser_cmd: str, openfortivpn_cmd: str, recovery_jsonlz4_file: str, ):
-    print(browser_cmd, "start_new_session=True")
+    print(browser_cmd)
     subprocess.Popen(browser_cmd, shell=True, start_new_session=True)
     fail_count = 0
     while True:
@@ -60,6 +62,8 @@ def cli(
     """
     import os
     import glob
+
+    assert '{cookie}' in openfortivpn_cmd, f'The {openfortivpn_cmd=} does not contain "{{cookie}}"!'
 
     found_files = glob.glob(os.path.expanduser(file))
     assert len(found_files) == 1, f'Failed to find {file=}; FILES={found_files}\nPlease specify it as an argument!'

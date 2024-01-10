@@ -27,16 +27,16 @@ To use this script, run something like the following command:
 
 ```bash
 openfortivpn_cookie_extractor \
---browser_cmd 'firefox https://univpn.unibe.ch/remote/saml/start --cookie={cookie}' \
---openfortivpn_cmd 'sudo openfortivpn univpn.unibe.ch'
+--browser_cmd 'firefox https://univpn.unibe.ch/remote/saml/start' \
+--openfortivpn_cmd 'sudo openfortivpn univpn.unibe.ch --cookie={cookie}'
 ```
 
 You can also specify the path to the `recovery.jsonlz4` file if you have multiple Firefox profiles:
 
 ```bash
 openfortivpn_cookie_extractor \
---browser_cmd 'firefox https://univpn.unibe.ch/remote/saml/start --cookie={cookie}' \
---openfortivpn_cmd 'sudo openfortivpn univpn.unibe.ch' \
+--browser_cmd 'firefox https://univpn.unibe.ch/remote/saml/start' \
+--openfortivpn_cmd 'sudo openfortivpn univpn.unibe.ch --cookie={cookie}' \
 --file='~/.mozilla/firefox/some-profile-id/sessionstore-backups/recovery.jsonlz4'
 ```
 
@@ -45,7 +45,7 @@ openfortivpn_cookie_extractor \
 To this line to `.bashrc`:
 
 ```bash
-alias vpn="openfortivpn_cookie_extractor --browser_cmd 'firefox https://univpn.unibe.ch/remote/saml/start --cookie={cookie}' --openfortivpn_cmd 'sudo openfortivpn univpn.unibe.ch'"
+alias vpn="openfortivpn_cookie_extractor --browser_cmd 'firefox https://univpn.unibe.ch/remote/saml/start' --openfortivpn_cmd 'sudo openfortivpn univpn.unibe.ch' --cookie={cookie}"
 ```
 
 Then you can just run `vpn` to connect to the VPN.

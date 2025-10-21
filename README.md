@@ -18,7 +18,7 @@ The script runs in an infinite loop and tries to connect every 5 seconds. If the
 To install this package, run the following command:
 
 ```bash
-pipx install git+https://github.com/MrTomRod/openfortivpn_cookie_extractor
+uv tool install git+https://github.com/MrTomRod/openfortivpn_cookie_extractor
 ```
 
 ## Usage

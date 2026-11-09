@@ -45,7 +45,7 @@ openfortivpn_cookie_extractor \
 To this line to `.bashrc`:
 
 ```bash
-alias vpn="openfortivpn_cookie_extractor --browser_cmd 'firefox https://univpn.unibe.ch/remote/saml/start' --openfortivpn_cmd 'sudo openfortivpn univpn.unibe.ch' --cookie={cookie}"
+alias vpn="openfortivpn_cookie_extractor --browser_cmd 'firefox https://univpn.unibe.ch/remote/saml/start' --openfortivpn_cmd 'sudo openfortivpn univpn.unibe.ch --cookie={cookie}'"
 ```
 
 Then you can just run `vpn` to connect to the VPN.
